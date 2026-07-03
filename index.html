@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harshada - Portfolio</title>
+    <meta name="description" content="A modern dark portfolio website.">
+    <meta property="og:title" content="Portfolio Website">
+    <meta property="og:description" content="A modern dark portfolio website.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./main.js" defer></script>
+</head>
+
+<body class="bg-dark-bg text-gray-200 custom-bg">
+    <!-- custom overlay effect -->
+    <div class="custom-overlay"></div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="fixed top-0 w-full bg-dark-bg/90 backdrop-blur-md border-b border-dark-border z-50">
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="text-2xl font-bold gradient-text">H</div>
+                    <ul class="hidden md:flex space-x-8">
+                        <li><a href="#home" class="hover:text-custom-green transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-custom-green transition">About</a></li>
+                        <li><a href="#core-strengths" class="hover:text-custom-green transition">Strengths</a></li>
+                        <li><a href="#achievements" class="hover:text-custom-green transition">Achievements</a></li>
+                        <li><a href="#skills" class="hover:text-custom-green transition">Skills</a></li>
+                        <li><a href="#experience" class="hover:text-custom-green transition">Experience</a></li>
+                        <li><a href="#projects" class="hover:text-custom-green transition">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-custom-green transition">Contact</a></li>
+                    </ul>
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                <!-- Mobile menu -->
+                <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+                    <a href="#home" class="block py-2 hover:text-custom-green">Home</a>
+                    <a href="#about" class="block py-2 hover:text-custom-green">About</a>
+                    <a href="#core-strengths" class="block py-2 hover:text-custom-green">Core Strengths</a>
+                    <a href="#achievements" class="block py-2 hover:text-custom-green">Achievements</a>
+                    <a href="#skills" class="block py-2 hover:text-custom-green">Skills</a>
+                    <a href="#experience" class="block py-2 hover:text-custom-green">Experience</a>
+                    <a href="#projects" class="block py-2 hover:text-custom-green">Projects</a>
+                    <a href="#contact" class="block py-2 hover:text-custom-green">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative">
+        <div class="container mx-auto px-6 text-center z-10">
+            <div class="animate-slide-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                    Hello, I'm <span class="gradient-text">Harshada</span>
+                </h1>
+                <p id="typing-text"
+                    class="text-2xl md:text-3xl text-gray-400 mb-8 transition-all duration-300 ease-in-out">
+                    Full Stack Developer
+                </p>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">
+                    I build web applications that are fast, reliable, and built to grow.
+                    With 6+ years of experience, I enjoy solving problems and creating solutions that make a real
+                    impact.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects"
+                        class="px-8 py-3 bg-gradient-to-r from-custom-green to-custom-blue rounded-full text-dark-bg font-semibold hover:shadow-lg hover:shadow-custom-green/50 transition transform hover:scale-105">
+                        View Projects
+                    </a>
+                    <a href="#" download="Harshada_Vichare_Resume_2026.pdf"
+                        class="px-8 py-3 border-2 border-custom-green rounded-full hover:bg-custom-green/90 hover:text-dark-bg transition transform hover:scale-105">
+                        Download Resume
+                    </a>
+                </div>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <a href="https://github.com/harshada-vichare" target="_blank"
+                        class="text-2xl hover:text-custom-green transition"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harshada-vichare" target="_blank"
+                        class="text-2xl hover:text-custom-blue transition"><i class="fab fa-square-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Animated particles -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute w-2 h-2 bg-custom-green rounded-full animate-float" style="top: 20%; left: 10%;"></div>
+            <div class="absolute w-2 h-2 bg-custom-blue rounded-full animate-float"
+                style="top: 60%; left: 80%; animation-delay: 1s;"></div>
+            <div class="absolute w-2 h-2 bg-custom-purple rounded-full animate-float"
+                style="top: 40%; left: 60%; animation-delay: 2s;"></div>
+            <div class="absolute w-2 h-2 bg-custom-pink rounded-full animate-float"
+                style="top: 80%; left: 30%; animation-delay: 3s;"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+                <div class="space-y-4 md:col-span-2 order-2 md:order-1">
+                    <p class="text-gray-400 leading-relaxed">
+                        As a web developer, I enjoy building applications that are simple, efficient, and reliable. Over
+                        the past 6+ years, I've worked on CRM systems, ERP platforms, financial applications, WordPress
+                        websites, and custom web solutions for businesses across different industries.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed"> My experience includes PHP, Laravel, CodeIgniter, MySQL,
+                        JavaScript, and WordPress. I believe learning never stops, which is why I'm expanding my skills
+                        in modern full-stack technologies.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
+                            <div class="text-3xl font-bold text-custom-purple">6+</div>
+                            <div class="text-sm text-gray-400">Years Experience</div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
+                            <div class="text-3xl font-bold text-custom-green">20+</div>
+                            <div class="text-sm text-gray-400">Projects Delivered</div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
+                            <div class="text-3xl font-bold text-custom-blue">50%</div>
+                            <div class="text-sm text-gray-400">Performance Improvement</div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
+                            <div class="text-3xl font-bold text-custom-pink">15+</div>
+                            <div class="text-sm text-gray-400">Websites Managed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative order-1 md:order-2">
+                    <div
+                        class="w-60 h-60 mx-auto rounded-full bg-gradient-to-br from-custom-green via-custom-blue to-custom-purple p-1">
+                        <div class="w-full h-full rounded-full bg-dark-bg flex items-center justify-center">
+                            <span class="text-7xl">👩‍💻</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Strengths Section -->
+    <section id="core-strengths" class="py-20 bg-dark-card/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Core Strengths</h2>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-code-merge text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Problem Solving
+                    </h3>
+                    <p class="text-gray-400">
+                        Skilled at analyzing challenges and developing practical, efficient solutions. </p>
+                </div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-code text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Clean Code
+                    </h3>
+                    <p class="text-gray-400">
+                        Committed to writing clean, maintainable, and well-structured code. </p>
+                </div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-arrow-up-right-dots text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Continuous Learning
+                    </h3>
+                    <p class="text-gray-400">
+                        Passionate about learning new technologies and improving development skills. </p>
+                </div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-users text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Team Collaboration
+                    </h3>
+                    <p class="text-gray-400">
+                        Experienced in working effectively with cross-functional teams to achieve project goals. </p>
+                </div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-calendar-days text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Time Management</h3>
+                    <p class="text-gray-400">
+                        Able to prioritize tasks and consistently deliver work within deadlines. </p>
+                </div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-blue to-custom-purple flex items-center justify-center">
+                        <i class="fas fa-seedling text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Adaptability</h3>
+                    <p class="text-gray-400">
+                        Quick to learn new tools, technologies, and workflows in dynamic environments. </p>
+                </div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-pink to-custom-green flex items-center justify-center">
+                        <i class="fas fa-cubes text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Project Management</h3>
+                    <p class="text-gray-400">
+                        Experienced in planning, organizing, and delivering projects with a structured approach. </p>
+                </div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-purple flex items-center justify-center">
+                        <i class="fas fa-list-check text-2xl text-dark-bg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Attention to Detail</h3>
+                    <p class="text-gray-400">
+                        Focused on writing accurate, reliable code while ensuring a polished user experience. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20 bg-dark-card/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Achievements</h2>
+            <div class="mx-auto grid md:grid-cols-4 gap-8">
+                <div class="w-full bg-dark-card p-4 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-ranking-star text-2xl text-dark-bg"></i>
+                    </div>
+                    <p class="text-gray-400 italic"> Improved website performance by up to 50%
+                        through
+                        optimization and SEO enhancements.
+                    </p>
+                </div>
+                <div class="w-full bg-dark-card p-4 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-blue to-custom-purple flex items-center justify-center">
+                        <i class="fas fa-ranking-star text-2xl text-dark-bg"></i>
+                    </div>
+                    <p class="text-gray-400 italic"> Designed and developed CRM, ERP and financial
+                        web applications using PHP and JavaScript.
+                    </p>
+                </div>
+                <div class="w-full bg-dark-card p-4 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-purple to-custom-pink flex items-center justify-center">
+                        <i class="fas fa-ranking-star text-2xl text-dark-bg"></i>
+                    </div>
+                    <p class="text-gray-400 italic"> Increased enterprise booking system
+                        performance by 40% through backend optimization.
+                    </p>
+                </div>
+                <div class="w-full bg-dark-card p-4 rounded-lg card-hover text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-ranking-star text-2xl text-dark-bg"></i>
+                    </div>
+                    <p class="text-gray-400 italic"> Delivered solutions for manufacturing,
+                        hospitality, financial, and small businesses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Technical Skills</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Frontend Skills -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-custom-green">Frontend Development</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-html5 text-2xl mb-2 text-custom-green"></i>
+                            <p>HTML</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-css text-2xl mb-2 text-custom-blue"></i>
+                            <p>CSS</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-js text-2xl mb-2 text-custom-purple"></i>
+                            <p>JavaScript</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-code text-2xl mb-2 text-custom-pink"></i>
+                            <p>jQuery</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-bootstrap text-2xl mb-2 text-custom-green"></i>
+                            <p>Bootstrap</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-code text-2xl mb-2 text-custom-blue"></i>
+                            <p>Tailwind</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width:70%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-sass text-2xl mb-2 text-custom-purple"></i>
+                            <p>SASS / SCSS</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-custom-blue">Backend Development & Database</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-php text-2xl mb-2 text-custom-green"></i>
+                            <p>PHP</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-fire text-2xl mb-2 text-custom-blue"></i>
+                            <p>CodeIgniter</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-laravel text-2xl mb-2 text-custom-purple"></i>
+                            <p>Laravel</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-database text-2xl mb-2 text-custom-pink"></i>
+                            <p>MySQL</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-custom-purple">Tools & Platforms</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-git text-2xl mb-2 text-custom-green"></i>
+                            <p>Git</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width:70%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-github text-2xl mb-2 text-custom-blue"></i>
+                            <p>GitHub</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-figma text-2xl mb-2 text-custom-purple"></i>
+                            <p>Figma</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-image text-2xl mb-2 text-custom-pink"></i>
+                            <p>Photoshop</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-trello text-2xl mb-2 text-custom-green"></i>
+                            <p>Trello</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-cogs text-2xl mb-2 text-custom-blue"></i>
+                            <p>Postman</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & Deployment -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-custom-green">Cloud & Deployment</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-aws text-2xl mb-2 text-custom-green"></i>
+                            <p>AWS (EC2)</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-cloud text-2xl mb-2 text-custom-blue"></i>
+                            <p>Vercel</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-server text-2xl mb-2 text-custom-purple"></i>
+                            <p>Netlify</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CMS -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-custom-blue">CMS</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-wordpress text-2xl mb-2 text-custom-green"></i>
+                            <p>WordPress</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-magento text-2xl mb-2 text-custom-blue"></i>
+                            <p>Magento</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-shopify text-2xl mb-2 text-custom-purple"></i>
+                            <p>Shopify</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-webflow text-2xl mb-2 text-custom-pink"></i>
+                            <p>Webflow</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-code text-2xl mb-2 text-custom-green"></i>
+                            <p>Framer</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Currently Learning -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-custom-pink">Currently Learning</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-react text-2xl mb-2 text-custom-green"></i>
+                            <p>React.js</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-green to-custom-blue h-1 rounded-full progress-bar"
+                                    style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fab fa-node-js text-2xl mb-2 text-custom-blue"></i>
+                            <p>Node.js</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-blue to-custom-purple h-1 rounded-full progress-bar"
+                                    style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                            <i class="fas fa-database text-2xl mb-2 text-custom-purple"></i>
+                            <p>MongoDB</p>
+                            <div class="w-full bg-dark-card rounded-full h-2 mt-3">
+                                <div class="bg-gradient-to-r from-custom-purple to-custom-pink h-1 rounded-full progress-bar"
+                                    style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-dark-card/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Work Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="relative pl-8 border-l-2 border-custom-green">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-custom-green rounded-full"></div>
+                    <div class="bg-dark-card p-6 rounded-lg card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-custom-green">Freelance Web Developer</h3>
+                            <span class="text-sm text-gray-400">2025 - Present</span>
+                        </div>
+                        <p class="text-gray-300 font-medium mb-2">Remote</p>
+                        <p class="text-gray-400">
+                            Developed secure authentication modules with API integration, reducing unauthorized access
+                            issues and
+                            improving user account management.
+                        </p>
+                        <p class="text-gray-400">
+                            Resolved responsive design issues across devices, improving mobile usability and reducing
+                            client
+                            reported UI defects that led to improved online visibility.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-custom-blue">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-custom-blue rounded-full"></div>
+                    <div class="bg-dark-card p-6 rounded-lg card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-custom-blue">Entrepreneurship</h3>
+                            <span class="text-sm text-gray-400">2024 - 2025</span>
+                        </div>
+                        <p class="text-gray-300 font-medium mb-2"></p>
+                        <p class="text-gray-400">
+                            Independently managed end-to-end business operations including vendor coordination, customer
+                            engagement and order fulfillment.
+                        </p>
+                        <p class="text-gray-400">
+                            Implemented inventory and financial tracking processes using Excel and Figma-based digital
+                            catalogs to
+                            improve operational efficiency.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-custom-purple">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-custom-purple rounded-full"></div>
+                    <div class="bg-dark-card p-6 rounded-lg card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-custom-purple">Independent Consultant</h3>
+                            <span class="text-sm text-gray-400">2022 - 2024</span>
+                        </div>
+                        <p class="text-gray-300 font-medium mb-2">Remote</p>
+                        <p class="text-gray-400">
+                            Developed and optimized backend microservices for a medium-scale enterprise in the
+                            hospitality sector,
+                            improving overall booking system speed by 40%.
+                        </p>
+                        <p class="text-gray-400">
+                            Maintained and enhanced client web applications while creating user documentation that
+                            improved
+                            issue resolution and knowledge transfer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-custom-pink">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-custom-pink rounded-full"></div>
+                    <div class="bg-dark-card p-6 rounded-lg card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-custom-pink">PHP Programmer</h3>
+                            <span class="text-sm text-gray-400">2019 - 2022</span>
+                        </div>
+                        <p class="text-gray-300 font-medium mb-2">Growthwell Consulting</p>
+                        <p class="text-gray-400">
+                            Designed and developed custom CRM and ERP systems with responsive dashboards using HTML,
+                            CSS,
+                            JavaScript and jQuery.
+                        </p>
+                        <p class="text-gray-400">
+                            Maintained and optimized 15+ WordPress websites with regular updates that increased
+                            performance of
+                            websites.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-custom-green">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-custom-green rounded-full"></div>
+                    <div class="bg-dark-card p-6 rounded-lg card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-custom-green">Web Developer</h3>
+                            <span class="text-sm text-gray-400">2018 - 2019</span>
+                        </div>
+                        <p class="text-gray-300 font-medium mb-2">Creative Pills</p>
+                        <p class="text-gray-400">
+                            Developed mobile friendly websites using HTML, CSS, JavaScript and jQuery.
+                        </p>
+                        <p class="text-gray-400">
+                            Integrated API services and built custom plugins in WordPress. </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-custom-blue">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-custom-blue rounded-full"></div>
+                    <div class="bg-dark-card p-6 rounded-lg card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-custom-blue">PHP Developer</h3>
+                            <span class="text-sm text-gray-400">2017 - 2018</span>
+                        </div>
+                        <p class="text-gray-300 font-medium mb-2">Get My Machine</p>
+                        <p class="text-gray-400">
+                            Built and maintained admin panel and web interface with JavaScript, HTML, CSS.
+                        </p>
+                        <p class="text-gray-400">
+                            Maintained and optimized website performance, ensuring reliable operation and improved user
+                            experience. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Projects</h2>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
+                    <div
+                        class="h-48 bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                        <i class="fas fa-palette text-6xl text-dark-bg"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Aavaas - Real Estate Website</h3>
+                        <p class="text-gray-400 mb-4">A real estate booking system design, with responsive UI.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-custom-green/20 text-custom-green rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-custom-blue/20 text-custom-blue rounded text-xs">SCSS</span>
+                            <span class="px-2 py-1 bg-custom-purple/20 text-custom-purple rounded text-xs">HTML</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://aavaas.vercel.app/" target="_blank"
+                                class="text-custom-green hover:text-custom-blue transition">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                            <a href="https://github.com/harshada-vichare/estate-ui" target="_blank"
+                                class="text-custom-green hover:text-custom-blue transition">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
+                    <div
+                        class="h-48 bg-gradient-to-br from-custom-blue to-custom-purple flex items-center justify-center">
+                        <i class="fas fa-handshake text-6xl text-dark-bg"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">CRM System</h3>
+                        <p class="text-gray-400 mb-4">
+                            A System includes admin dashboard for managing customers, leads, and products with search,
+                            CRUD operations, and a responsive UI.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-custom-green/20 text-custom-green rounded text-xs">PHP</span>
+                            <span class="px-2 py-1 bg-custom-blue/20 text-custom-blue rounded text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-custom-purple/20 text-custom-purple rounded text-xs">HTML</span>
+                            <span class="px-2 py-1 bg-custom-pink/20 text-custom-pink rounded text-xs">CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <!-- <a href="#" class="text-custom-green hover:text-custom-blue transition">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a> -->
+                            <a href="https://github.com/harshada-vichare/php-crm" target="_blank"
+                                class="text-custom-green hover:text-custom-blue transition">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-card/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-custom-green to-custom-blue flex items-center justify-center">
+                                <i class="fas fa-envelope text-dark-bg"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Email</p>
+                                <a href="mailto:harshada.vichare.in@gmail.com">harshada.vichare.in@gmail.com</a>
+                            </div>
+                        </div>
+                        <!-- <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-custom-blue to-custom-purple flex items-center justify-center">
+                                <i class="fas fa-phone text-dark-bg"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Phone</p>
+                                <a href="tel:+919324103069">+91 93241 03069</a>
+                            </div>
+                        </div> -->
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-custom-purple to-custom-pink flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-dark-bg"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Location</p>
+                                <p>Navi Mumbai, MH, IN</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="https://formsubmit.co/youremail@gmail.com" method="POST" class="space-y-4">
+                        <input type="text" required name="name" placeholder="Your Name"
+                            class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-custom-green">
+                        <input type="email" required name="email" placeholder="Your Email"
+                            class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-custom-green">
+                        <textarea name="message" required placeholder="Your Message" rows="4"
+                            class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-custom-green"></textarea>
+                        <input type="hidden" name="_subject" value="Portfolio contact!">
+                        <input type="hidden" name="_template" value="table">
+                        <button type="submit"
+                            class="w-full px-8 py-3 bg-gradient-to-r from-custom-green to-custom-blue rounded-lg text-dark-bg font-semibold hover:shadow-lg hover:shadow-custom-green/50 transition transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-dark-border">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="https://github.com/harshada-vichare" target="_blank"
+                    class="text-2xl mx-2 hover:text-custom-green transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/harshada-vichare" target="_blank"
+                    class="text-2xl mx-2 hover:text-custom-blue transition">
+                    <i class="fab fa-square-linkedin"></i>
+                </a>
+                <a href="#" download="Harshada_Vichare_Resume_2026.pdf" target="_blank"
+                    class="text-2xl mx-2 hover:text-custom-purple transition"><i class="fas fa-file-alt"></i></a>
+            </div>
+            <p class="text-gray-400">
+                &copy;
+                <script>document.write(new Date().getFullYear());</script> Harshada Portfolio. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
