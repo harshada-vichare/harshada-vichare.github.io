@@ -103,10 +103,10 @@ const titles = [
   "PHP Developer",
   "Backend Developer",
   "Problem Solver",
-  "WordPress Developer",
+  // "WordPress Developer",
   "Web Application Developer",
   "Laravel Developer",
-  // "Software Architect",
+  "Software Developer",
 ];
 const textElement = document.getElementById("typing-text");
 
